@@ -1,4 +1,4 @@
-import './CarCard.css';
+import "./CarCard.css";
 
 interface CarCardProps {
   id: string;
@@ -14,14 +14,20 @@ interface CarCardProps {
   price?: string;
 }
 
-export default function CarCard({ name, model, specs, image, price }: CarCardProps) {
+export default function CarCard({
+  name,
+  model,
+  specs,
+  image,
+  price,
+}: CarCardProps) {
   return (
     <div className="car-card">
       <div className="car-card-image-container">
         <img src={image} alt={`${name} ${model}`} className="car-card-image" />
         <div className="car-card-overlay"></div>
       </div>
-      
+
       <div className="car-card-content">
         <div className="car-card-header">
           <div>
@@ -30,7 +36,7 @@ export default function CarCard({ name, model, specs, image, price }: CarCardPro
           </div>
           {price && <div className="car-card-price">{price}</div>}
         </div>
-        
+
         <div className="car-card-specs">
           <div className="spec-item">
             <span className="spec-label">Top Speed</span>
@@ -53,7 +59,7 @@ export default function CarCard({ name, model, specs, image, price }: CarCardPro
             </div>
           )}
         </div>
-        
+
         <button className="car-card-button">
           Learn More
           <span className="button-arrow">→</span>

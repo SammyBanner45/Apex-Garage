@@ -1,4 +1,4 @@
-import './Hero.css';
+import "./Hero.css";
 
 interface HeroProps {
   title: string;
@@ -12,10 +12,19 @@ interface HeroProps {
   };
 }
 
-export default function Hero({ title, subtitle, description, image, specs }: HeroProps) {
+export default function Hero({
+  title,
+  subtitle,
+  description,
+  image,
+  specs,
+}: HeroProps) {
   return (
     <section className="hero">
-      <div className="hero-background" style={{ backgroundImage: `url(${image})` }}>
+      <div
+        className="hero-background"
+        style={{ backgroundImage: `url(${image})` }}
+      >
         <div className="hero-overlay"></div>
       </div>
 

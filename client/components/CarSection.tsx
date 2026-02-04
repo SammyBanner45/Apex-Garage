@@ -1,5 +1,5 @@
-import CarCard from './CarCard';
-import './CarSection.css';
+import CarCard from "./CarCard";
+import "./CarSection.css";
 
 interface Car {
   id: string;
@@ -18,27 +18,31 @@ interface Car {
 interface CarSectionProps {
   title: string;
   description?: string;
-  accentColor?: 'gold' | 'blue' | 'red';
+  accentColor?: "gold" | "blue" | "red";
   cars: Car[];
 }
 
-export default function CarSection({ title, description, accentColor = 'gold', cars }: CarSectionProps) {
+export default function CarSection({
+  title,
+  description,
+  accentColor = "gold",
+  cars,
+}: CarSectionProps) {
   return (
     <section className={`car-section car-section--${accentColor}`}>
       <div className="container">
         <div className="car-section-header">
           <div>
             <h2 className="car-section-title">{title}</h2>
-            {description && <p className="car-section-description">{description}</p>}
+            {description && (
+              <p className="car-section-description">{description}</p>
+            )}
           </div>
         </div>
 
         <div className="car-grid">
           {cars.map((car) => (
-            <CarCard
-              key={car.id}
-              {...car}
-            />
+            <CarCard key={car.id} {...car} />
           ))}
         </div>
       </div>

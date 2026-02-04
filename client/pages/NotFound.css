@@ -3,7 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-primary) 0%,
+    var(--color-bg-secondary) 100%
+  );
   padding: var(--spacing-2xl);
 }
 
@@ -27,7 +31,11 @@
 .not-found-title {
   font-size: 6rem;
   font-weight: var(--font-weight-extrabold);
-  background: linear-gradient(135deg, var(--color-accent-gold) 0%, var(--color-accent-blue) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-gold) 0%,
+    var(--color-accent-blue) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -52,7 +60,11 @@
 .not-found-link {
   display: inline-block;
   padding: var(--spacing-lg) var(--spacing-2xl);
-  background: linear-gradient(135deg, var(--color-accent-gold) 0%, #e5b145 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-gold) 0%,
+    #e5b145 100%
+  );
   color: var(--color-bg-primary);
   border-radius: 6px;
   font-weight: var(--font-weight-bold);

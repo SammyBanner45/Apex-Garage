@@ -156,7 +156,11 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-accent-gold) 0%, #e5b145 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-gold) 0%,
+    #e5b145 100%
+  );
   color: var(--color-bg-primary);
 }
 

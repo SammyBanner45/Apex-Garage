@@ -21,7 +21,11 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-tertiary) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-secondary) 0%,
+    var(--color-bg-tertiary) 100%
+  );
 }
 
 .car-card-image {
@@ -41,7 +45,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, rgba(11, 11, 11, 0) 0%, rgba(11, 11, 11, 0.6) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(11, 11, 11, 0) 0%,
+    rgba(11, 11, 11, 0.6) 100%
+  );
   opacity: 0;
   transition: opacity var(--transition-normal);
 }
@@ -114,7 +122,11 @@
 }
 
 .car-card-button {
-  background: linear-gradient(135deg, var(--color-accent-gold) 0%, #e5b145 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-gold) 0%,
+    #e5b145 100%
+  );
   color: var(--color-bg-primary);
   padding: var(--spacing-md) var(--spacing-lg);
   border-radius: 6px;
