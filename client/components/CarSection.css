@@ -1,0 +1,103 @@
+.car-section {
+  padding: var(--spacing-4xl) 0;
+  border-top: 1px solid var(--color-border-light);
+  background: var(--color-bg-secondary);
+  transition: background var(--transition-slow);
+}
+
+.car-section:nth-child(even) {
+  background: var(--color-bg-tertiary);
+}
+
+.car-section--gold .car-section-title {
+  color: var(--color-accent-gold);
+}
+
+.car-section--blue .car-section-title {
+  color: var(--color-accent-blue);
+}
+
+.car-section--red .car-section-title {
+  color: var(--color-accent-red);
+}
+
+.car-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.car-section-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-extrabold);
+  margin: 0;
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: -0.02em;
+}
+
+.car-section-description {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 500px;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-2xl);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .car-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .car-section {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .car-section-header {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .car-section-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .car-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .car-section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .car-section-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .car-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
