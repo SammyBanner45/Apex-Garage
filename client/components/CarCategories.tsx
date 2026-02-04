@@ -1,4 +1,4 @@
-import './CarCategories.css';
+import "./CarCategories.css";
 
 interface Category {
   id: string;
@@ -10,26 +10,29 @@ interface Category {
 
 const categories: Category[] = [
   {
-    id: 'suv',
-    name: 'SUV',
-    description: 'Premium performance and luxury combined',
-    image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&h=600&fit=crop',
-    icon: '🏎️'
+    id: "suv",
+    name: "SUV",
+    description: "Premium performance and luxury combined",
+    image:
+      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&h=600&fit=crop",
+    icon: "🏎️",
   },
   {
-    id: 'sports',
-    name: 'Sports',
-    description: 'Pure speed and exhilarating power',
-    image: 'https://images.unsplash.com/photo-1553882900-d174edf69a16?w=600&h=600&fit=crop',
-    icon: '⚡'
+    id: "sports",
+    name: "Sports",
+    description: "Pure speed and exhilarating power",
+    image:
+      "https://images.unsplash.com/photo-1553882900-d174edf69a16?w=600&h=600&fit=crop",
+    icon: "⚡",
   },
   {
-    id: 'electric',
-    name: 'Electric',
-    description: 'Future of automotive innovation',
-    image: 'https://images.unsplash.com/photo-1560958089-b8a46dd52956?w=600&h=600&fit=crop',
-    icon: '🔋'
-  }
+    id: "electric",
+    name: "Electric",
+    description: "Future of automotive innovation",
+    image:
+      "https://images.unsplash.com/photo-1560958089-b8a46dd52956?w=600&h=600&fit=crop",
+    icon: "🔋",
+  },
 ];
 
 export default function CarCategories() {
@@ -38,15 +41,17 @@ export default function CarCategories() {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Explore Collections</h2>
-          <p className="section-subtitle">Discover our curated selection of premium vehicles</p>
+          <p className="section-subtitle">
+            Discover our curated selection of premium vehicles
+          </p>
         </div>
 
         <div className="categories-grid">
           {categories.map((category) => (
             <div key={category.id} className="category-card">
               <div className="card-image-wrapper">
-                <img 
-                  src={category.image} 
+                <img
+                  src={category.image}
                   alt={category.name}
                   className="card-image"
                 />

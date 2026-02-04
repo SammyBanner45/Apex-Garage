@@ -1,5 +1,9 @@
 .why-apex-section {
-  background: linear-gradient(to bottom, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg-secondary) 0%,
+    var(--color-bg-primary) 100%
+  );
   padding: var(--spacing-4xl) 0;
   position: relative;
   overflow: hidden;
@@ -10,10 +14,18 @@
   opacity: 0;
 }
 
-.why-apex-section.animate-in .benefit-card:nth-child(1) { animation-delay: 0.1s; }
-.why-apex-section.animate-in .benefit-card:nth-child(2) { animation-delay: 0.2s; }
-.why-apex-section.animate-in .benefit-card:nth-child(3) { animation-delay: 0.3s; }
-.why-apex-section.animate-in .benefit-card:nth-child(4) { animation-delay: 0.4s; }
+.why-apex-section.animate-in .benefit-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.why-apex-section.animate-in .benefit-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.why-apex-section.animate-in .benefit-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.why-apex-section.animate-in .benefit-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
 
 .section-header {
   text-align: center;
@@ -24,7 +36,11 @@
   font-size: var(--font-size-5xl);
   font-weight: var(--font-weight-extrabold);
   margin-bottom: var(--spacing-lg);
-  background: linear-gradient(135deg, var(--color-accent-gold) 0%, var(--color-accent-blue) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-gold) 0%,
+    var(--color-accent-blue) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -46,7 +62,11 @@
 
 .benefit-card {
   padding: var(--spacing-2xl);
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(0, 198, 255, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.05) 0%,
+    rgba(0, 198, 255, 0.05) 100%
+  );
   border: 1px solid var(--color-border);
   border-radius: 4px;
   position: relative;
@@ -56,13 +76,18 @@
 }
 
 .benefit-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.1),
+    transparent
+  );
   transition: left var(--transition-slow);
 }
 
@@ -72,7 +97,11 @@
 
 .benefit-card:hover {
   border-color: var(--color-accent-gold);
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 198, 255, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.1) 0%,
+    rgba(0, 198, 255, 0.1) 100%
+  );
   box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
   transform: translateY(-4px);
 }
@@ -115,7 +144,11 @@
 .benefit-accent-line {
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--color-accent-gold) 0%, var(--color-accent-blue) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--color-accent-gold) 0%,
+    var(--color-accent-blue) 100%
+  );
   transition: width var(--transition-normal);
 }
 
