@@ -1,9 +1,10 @@
 import "./global.css";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
-const App = () => (
+const AppComponent = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Index />} />
@@ -12,5 +13,4 @@ const App = () => (
   </BrowserRouter>
 );
 
-export { App };
-export default App;
+createRoot(document.getElementById("root")!).render(<AppComponent />);
