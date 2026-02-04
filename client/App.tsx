@@ -13,4 +13,7 @@ const AppComponent = () => (
   </BrowserRouter>
 );
 
-createRoot(document.getElementById("root")!).render(<AppComponent />);
+const rootElement = document.getElementById("root");
+if (rootElement && !rootElement._reactRootContainer) {
+  createRoot(rootElement).render(<AppComponent />);
+}
