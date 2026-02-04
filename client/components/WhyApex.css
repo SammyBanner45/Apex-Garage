@@ -1,0 +1,225 @@
+.why-apex-section {
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg-secondary) 0%,
+    var(--color-bg-primary) 100%
+  );
+  padding: var(--spacing-4xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-apex-section.animate-in .benefit-card {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.why-apex-section.animate-in .benefit-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.why-apex-section.animate-in .benefit-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.why-apex-section.animate-in .benefit-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.why-apex-section.animate-in .benefit-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-4xl);
+}
+
+.section-title {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-extrabold);
+  margin-bottom: var(--spacing-lg);
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-gold) 0%,
+    var(--color-accent-blue) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-2xl);
+}
+
+.benefit-card {
+  padding: var(--spacing-2xl);
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.05) 0%,
+    rgba(0, 198, 255, 0.05) 100%
+  );
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  position: relative;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.benefit-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.1),
+    transparent
+  );
+  transition: left var(--transition-slow);
+}
+
+.benefit-card:hover::before {
+  left: 100%;
+}
+
+.benefit-card:hover {
+  border-color: var(--color-accent-gold);
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.1) 0%,
+    rgba(0, 198, 255, 0.1) 100%
+  );
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+  transform: translateY(-4px);
+}
+
+.benefit-icon {
+  font-size: var(--font-size-5xl);
+  margin-bottom: var(--spacing-lg);
+  display: inline-block;
+  transition: transform var(--transition-normal);
+}
+
+.benefit-card:hover .benefit-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.benefit-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+  transition: color var(--transition-normal);
+}
+
+.benefit-card:hover .benefit-title {
+  color: var(--color-accent-gold);
+}
+
+.benefit-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-lg);
+  transition: color var(--transition-normal);
+}
+
+.benefit-card:hover .benefit-description {
+  color: var(--color-text-primary);
+}
+
+.benefit-accent-line {
+  width: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--color-accent-gold) 0%,
+    var(--color-accent-blue) 100%
+  );
+  transition: width var(--transition-normal);
+}
+
+.benefit-card:hover .benefit-accent-line {
+  width: 30px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why-apex-section {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .section-title {
+    font-size: var(--font-size-4xl);
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-xl);
+  }
+
+  .benefit-card {
+    padding: var(--spacing-xl);
+  }
+
+  .benefit-icon {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .why-apex-section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .section-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .benefit-card {
+    padding: var(--spacing-lg);
+  }
+
+  .benefit-icon {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .benefit-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .benefit-description {
+    font-size: var(--font-size-xs);
+  }
+}
