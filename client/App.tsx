@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
-const AppComponent = () => (
+const App = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Index />} />
@@ -13,7 +13,8 @@ const AppComponent = () => (
   </BrowserRouter>
 );
 
-const rootElement = document.getElementById("root");
-if (rootElement && !rootElement._reactRootContainer) {
-  createRoot(rootElement).render(<AppComponent />);
+// Only create root once
+const container = document.getElementById("root");
+if (container) {
+  createRoot(container).render(<App />);
 }
